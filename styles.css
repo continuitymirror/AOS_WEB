@@ -1,0 +1,227 @@
+/* AOS_WEB — landing page design */
+:root {
+  --bg: #050506;
+  --bg-elevated: #111113;
+  --bg-card: #161618;
+  --border: #252528;
+  --border-light: #2a2a2e;
+  --text: #e8e8ea;
+  --text-muted: #88888c;
+  --accent: #b8b8bc;
+  --accent-warm: #741515;
+  --line: #3a3a3e;
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(50, 50, 60, 0.45), transparent),
+    radial-gradient(ellipse 120% 90% at 50% 120%, rgba(0, 0, 0, 0.9), transparent);
+}
+
+.site-header {
+  padding: 1.25rem 2rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-elevated);
+  text-align: center;
+}
+
+.header-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.logo-mark {
+  display: inline-block;
+  height: 6.5rem;
+  width: auto;
+  opacity: 0.2;
+}
+
+main {
+  flex: 1;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 4.5rem 1.75rem 5rem;
+  width: 100%;
+}
+
+/* — Masthead / hero — */
+.masthead {
+  text-align: center;
+  margin-bottom: 2.75rem;
+}
+
+.masthead-kicker {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0 0 1rem;
+}
+
+.masthead-title {
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  font-size: clamp(2.35rem, 4.2vw, 3.2rem);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  margin: 0 auto;
+  max-width: 22ch;
+}
+
+.hero-panel {
+  margin-bottom: 3rem;
+}
+
+.hero-frame {
+  border-radius: 0;
+  border: none;
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+}
+
+.hero-image {
+  aspect-ratio: 16 / 9;
+  border-radius: 0;
+  background: url('assets/AOS_IMAGE.png') center center / cover no-repeat;
+}
+
+/* — Access strip — */
+.access-strip {
+  text-align: center;
+  margin-bottom: 3.25rem;
+}
+
+.access-status {
+  font-size: 0.88rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-warm);
+  margin: 0 0 0.75rem;
+}
+
+.access-meta {
+  margin: 0 0 1.75rem;
+  font-size: 0.99rem;
+  color: var(--text-muted);
+}
+
+.access-alters {
+  margin: 0 0 1.25rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-warm);
+}
+
+.cta-bracket {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--accent-warm);
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 1rem 2.25rem;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.cta-bracket:hover {
+  color: var(--text);
+  text-shadow: 0 0 16px rgba(116, 21, 21, 0.7);
+}
+
+/* — Stacked sections — */
+.stacked-sections {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.stacked-block + .stacked-block {
+  margin-top: 2.25rem;
+}
+
+.section-divider {
+  border-top: 1px solid var(--border);
+  max-width: 60%;
+  margin: 2.75rem auto;
+}
+
+.stacked-cta {
+  text-align: center;
+  margin: 2.5rem 0;
+}
+
+.stacked-cta + .stacked-block {
+  margin-top: 0;
+}
+
+.stacked-heading {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.75rem;
+}
+
+.stacked-body {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 42ch;
+  margin: 0 auto;
+}
+
+/* — Bottom CTA — */
+.bottom-cta {
+  text-align: center;
+  margin-top: 2.75rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.bottom-kicker {
+  margin: 0;
+  text-align: center;
+  letter-spacing: 0.36em;
+  font-size: 0.83rem;
+  opacity: 0.7;
+}
+
+.bottom-note {
+  margin: 1.75rem auto 0;
+  max-width: none;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* — Site footer — */
+.site-footer {
+  padding: 1.75rem 2rem;
+  border-top: 1px solid var(--border);
+  background: var(--bg-elevated);
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
