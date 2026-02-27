@@ -34,7 +34,8 @@
         <p class="access-meta">
           Records Harmonization Authority · Continuity Review Program — Season 1
         </p>
-        <a id="cta-enter" href="https://app.continuitymirror.com" class="cta-bracket">[ Request access ]</a>
+        <a id="cta-enter" href="https://app.continuitymirror.com" class="cta-bracket js-request-access">[ Request Access ]</a>
+        <a id="cta-continue" href="https://app.continuitymirror.com" class="cta-bracket">[ Continue Access ]</a>
       </section>
 
       <section class="stacked-sections" aria-label="Index brief">
@@ -99,7 +100,7 @@
 
       <p class="stacked-heading bottom-kicker">ACCESS ALTERS CONTINUITY</p>
       <section class="bottom-cta">
-        <a id="cta-enter-footer" href="https://app.continuitymirror.com" class="cta-bracket cta-bracket-secondary">[ Begin review ]</a>
+        <a id="cta-enter-footer" href="https://app.continuitymirror.com" class="cta-bracket cta-bracket-secondary js-request-access">[ Request Access ]</a>
         <p class="bottom-note">
           Continuity is not the absence of anomaly. <br />It is the appearance of stability.
         </p>
@@ -107,9 +108,33 @@
     </main>
 
     <footer class="site-footer">
-      <p>&copy; AOS — The Continuity Index</p>
+      <p>&copy; 2026 Continuity Mirror
+        AOS — The Continuity Index is a fictional investigative experience.</p>
     </footer>
 
     <script src="app-url.js"></script>
+    <script>
+      async function startCheckout(e) {
+        e.preventDefault();
+
+        const res = await fetch("https://aos-checkout.ozone771.workers.dev", {
+          method: "POST"
+        });
+
+        const data = await res.json();
+
+        if (!res.ok || !data.url) {
+          console.error("Checkout error:", data);
+          alert("Checkout is temporarily unavailable. Please try again.");
+          return;
+        }
+
+        window.location.href = data.url;
+      }
+
+      document.querySelectorAll(".js-request-access").forEach((el) => {
+        el.addEventListener("click", startCheckout);
+      });
+    </script>
   </body>
 </html>

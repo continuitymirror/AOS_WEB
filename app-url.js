@@ -5,7 +5,7 @@
 const APP_URL = 'https://app.continuitymirror.com';
 
 (function () {
-  const links = document.querySelectorAll('#cta-enter, #cta-enter-footer');
+  const links = document.querySelectorAll('#cta-enter, #cta-continue, #cta-enter-footer');
   links.forEach(function (el) {
     el.href = APP_URL;
   });

@@ -139,6 +139,10 @@ main {
   transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
+.access-strip .cta-bracket + .cta-bracket {
+  margin-left: 0.1rem;
+}
+
 .cta-bracket:hover {
   color: var(--text);
   text-shadow: 0 0 16px rgba(116, 21, 21, 0.7);
@@ -224,4 +228,5 @@ main {
   font-size: 0.75rem;
   letter-spacing: 0.06em;
   color: var(--text-muted);
+  opacity: 0.6;
 }
