@@ -230,3 +230,17 @@ main {
   color: var(--text-muted);
   opacity: 0.6;
 }
+
+.site-footer .footer-support {
+  margin-top: 0.75rem;
+}
+
+.site-footer .footer-support a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.site-footer .footer-support a:hover {
+  color: var(--text);
+  text-decoration: underline;
+}
