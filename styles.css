@@ -37,6 +37,7 @@ body {
 }
 
 .header-inner {
+  position: relative;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -46,6 +47,35 @@ body {
   height: 6.5rem;
   width: auto;
   opacity: 0.2;
+}
+
+.youtube-link {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--text-muted);
+  opacity: 0.7;
+  transform: translateY(-50%);
+  transition: color 0.2s ease, opacity 0.2s ease, text-shadow 0.2s ease;
+}
+
+.youtube-link:hover,
+.youtube-link:focus-visible {
+  color: var(--text);
+  opacity: 1;
+  outline: none;
+  text-shadow: 0 0 16px rgba(116, 21, 21, 0.7);
+}
+
+.youtube-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  fill: currentColor;
 }
 
 main {
